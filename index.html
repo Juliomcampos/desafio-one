@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="logo_Alura">
+            <img src="./assests/logo_Alura.png" alt="Logo Alura azul escuro">
+        </section>
+        <section class="textoUsuarioBotoes">
+            <textarea class="textoUsuarioBotoes__input" name="" id="" cols="30" rows="16" placeholder="Digite seu texto"
+                maxlength="156"></textarea>
+            <div class="textoUsuarioBotoes__avisoFormatacao">
+                <img src="./assests/alerta.png" alt="Exclamação indicando alerta">
+                <p class="textoUsuárioBotoes__avisoFormatacao__textoAlerta">Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="textoUsuarioBotoes__botoes">
+                <button onclick="inputCriptografada()" class="textoUsuarioBotoes__botoes__Cripto"
+                    disabled>Criptografar</button>
+                <button onclick="inputDescriptografada()" class="textoUsuarioBotoes__botoes__Descripto"
+                    disabled>Descriptografar</button>
+            </div>
+        </section>
+        <section class="resultado">
+            <div class="resultadoCriptografia">
+                <img class="resultadoCriptografia__img" src="./assests/animacaoLupa.png"
+                    alt="Personagem com uma lupa na mão observando um diamante, fazendo alusão a procura por algo valioso.">
+                <div class="resultadoCriptografia__texto">
+                    <h2 class="resultadoCriptografia__titulo">Nenhuma mensagem encontrada</h2>
+                    <p class="resultadoCriptografia__paragrafo">Digite um texto que você deseja criptografar ou
+                        descriptografar.</p>
+                </div>
+            </div>
+            <button class="botaoCopiar" onclick="copiarTexto()">Copiar</button>
+        </section>
+    </main>
+    <footer>
+        <p>
+            Desenvolvido por Julio Campos
+        </p>
+        <a href="https://github.com/Juliomcampos"><img width="25" height="25"
+                src="https://img.icons8.com/ios-filled/50/github.png" alt="github"></a>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>

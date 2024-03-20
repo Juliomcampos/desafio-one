@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --cor-fundo: #F3F5FC;
+    --cor-fundoResultado: #FFFF;
+    --cor-destaque: #0A3871;
+    --cor-botao: #D8DFE8;
+    --cor-titulo: #343A40;
+    --cor-texto: #495057;
+
+    --fonte-primaria: "Inter", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-primaria);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.textoUsuarioBotoes {
+    display: flex;
+    flex-direction: column;
+    padding: 128px 5% 32px 5%;
+}
+
+.textoUsuarioBotoes__input {
+    border: none;
+    width: 688px;
+    background-color: var(--cor-fundo);
+    font-size: 2rem;
+    color: var(--cor-destaque);
+    resize: none;
+    font-family: var(--fonte-primaria);
+}
+
+.textoUsuarioBotoes__input:focus {
+    outline: none;
+}
+
+.textoUsuarioBotoes__input::placeholder {
+    color: var(--cor-destaque);
+}
+
+.textoUsuarioBotoes__avisoFormatacao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.aviso__proibido {
+    color: var(--cor-destaque);
+    font-weight: bold;
+    animation: salto 0.5s ease-in-out infinite alternate;
+
+}
+
+@keyframes salto {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+
+.textoUsuarioBotoes__botoes {
+    padding: 16px 0 0 0;
+    display: flex;
+    gap: 24px;
+}
+
+.textoUsuarioBotoes__botoes__Cripto {
+    padding: 24px;
+    width: 328px;
+    border-radius: 24px;
+    color: var(--cor-fundoResultado);
+    background-color: var(--cor-destaque);
+    font-size: 1rem;
+    font-weight: 100;
+    border: 1px solid var(--cor-destaque);
+}
+
+.textoUsuarioBotoes__botoes__Descripto {
+    padding: 24px;
+    width: 328px;
+    border-radius: 24px;
+    color: var(--cor-destaque);
+    background-color: var(--cor-botao);
+    font-size: 1rem;
+    font-weight: 100;
+    border: 1px solid var(--cor-destaque);
+}
+
+.textoUsuarioBotoes__botoes__Cripto:hover,
+.textoUsuarioBotoes__botoes__Descripto:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--cor-destaque);
+}
+
+.textoUsuarioBotoes__botoes__Cripto:disabled,
+.textoUsuarioBotoes__botoes__Descripto:disabled,
+.botaoCopiar:disabled {
+    cursor: not-allowed;
+    background-color: rgba(128, 128, 128, 0.5);
+    color: #666;
+    border: 0px;
+}
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    background-color: var(--cor-fundoResultado);
+    height: 944px;
+    width: 400px;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.resultadoCriptografia {
+    color: var(--cor-destaque);
+    font-family: var(--fonte-primaria);
+    gap: 32px;
+    word-break: break-all;
+}
+
+.resultado__exibido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.resultadoCriptografia__texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    gap: 16px;
+    width: 336px;
+}
+
+.resultadoCriptografia__titulo {
+    padding: 0px 36px 0px 36px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--cor-titulo);
+}
+
+.resultadoCriptografia__paragrafo {
+    padding: 0px 40px 0px 40px;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--cor-texto);
+}
+
+.botaoCopiar {
+    display: none;
+}
+
+.botaoCopiar{
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 24px;
+    width: 328px;
+    border-radius: 24px;
+    color: var(--cor-destaque);
+    background-color: var(--cor-botao);
+    font-size: 1rem;
+    font-weight: 100;
+    border: 1px solid var(--cor-destaque);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 1175px) {
+
+    body {
+        padding: 73.42px 40px 40px 40px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .logo_Alura {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .textoUsuarioBotoes {
+        padding: 116px 0px 64px 0px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .textoUsuarioBotoes__botoes{
+        justify-content: center;
+    
+    }
+
+    .textoUsuarioBotoes__input {
+        width: 100%;
+    }
+
+    .textoUsuárioBotoes__avisoFormatacao__textoAlerta{
+        width: 100%;
+        display: flex;
+        align-items: start;
+    }
+
+    .resultado {
+        width: 100%;
+        height: auto;
+    }
+
+    .resultadoCriptografia {
+        gap: 0px;
+        width: 100%;
+    }
+
+    .resultadoCriptografia__img {
+        display: none;
+    }
+
+    .resultadoCriptografia__texto {
+        width: auto;
+        padding: 32px;
+    }
+
+
+    footer {
+        padding-top: 40px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 750px){
+
+    body {
+        padding: 24px 16px 40px 16px;
+    }
+
+    .textoUsuarioBotoes {
+        padding: 80px 0px 64px 0px;
+    }
+
+    .textoUsuárioBotoes__avisoFormatacao__textoAlerta{
+        font-size: 0.75rem;
+        width: 100%;
+        align-items: start;
+    }
+
+    .textoUsuarioBotoes__botoes{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resultadoCriptografia__texto{
+        padding: 32px 32px 32px 32px;
+    }
+    
+    .resultadoCriptografia__titulo{
+        padding: 10px;
+    }
+
+    .resultadoCriptografia__paragrafo{
+        padding: 12px;
+    }
+
+    .resultado__exibido{
+        gap: 32px;
+    }
+
+    .botaoCopiar{
+        width: 279PX;
+    }
+}
